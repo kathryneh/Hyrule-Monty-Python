@@ -1,0 +1,25 @@
+#Sun Nov 20 00:48:43 EST 2011
+content_assist_proposals_foreground=0,0,0
+org.eclipse.jdt.ui.overrideannotation=true
+spelling_locale_initialized=true
+content_assist_disabled_computers=org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.text.templates_migrated=true
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
+tabWidthPropagated=true
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.editor.tab.width=
+fontPropagated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
+breadcrumb.org.eclipse.jdt.ui.JavaPerspective=true
+content_assist_proposals_background=255,255,255
+org.eclipse.jdt.ui.formatterprofiles.version=12
+content_assist_number_of_computers=17
+useQuickDiffPrefPage=true
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="avatars.AvatarCollection"><rhs name\="avatars.KnightAvatarCollection"/></lhs><lhs name\="avatars.KnightAvatarCollection"><rhs name\="avatars.KnightAvatarCollection"/></lhs><lhs name\="avatars.StandingArea"><rhs name\="avatars.OvalStandingArea"/></lhs><lhs name\="avatars.OvalStandingArea"><rhs name\="avatars.OvalStandingArea"/></lhs><lhs name\="scanner.Tokenizable"><rhs name\="scanner.MoveCommandToken"/></lhs><lhs name\="scanner.CommandToken"><rhs name\="scanner.MoveCommandToken"/></lhs><lhs name\="scanner.Token"><rhs name\="scanner.MoveCommandToken"/></lhs><lhs name\="scanner.MoveCommandToken"><rhs name\="scanner.MoveCommandToken"/></lhs><lhs name\="avatars.GuardAvatarized"><rhs name\="avatars.GuardAvatar"/></lhs><lhs name\="avatars.Avatarized"><rhs name\="avatars.GuardAvatar"/><rhs name\="avatars.KnightAvatar"/></lhs><lhs name\="avatars.Avatar"><rhs name\="avatars.GuardAvatar"/><rhs name\="avatars.KnightAvatar"/></lhs><lhs name\="avatars.GuardAvatar"><rhs name\="avatars.GuardAvatar"/></lhs><lhs name\="avatars.KnightAvatarized"><rhs name\="avatars.KnightAvatar"/></lhs><lhs name\="avatars.KnightAvatar"><rhs name\="avatars.KnightAvatar"/></lhs><lhs name\="avatars.FallenCollection"><rhs name\="avatars.FallenAvatarCollection"/><rhs name\="avatars.FallenCollection"/></lhs><lhs name\="avatars.FallenAvatarCollection"><rhs name\="avatars.FallenAvatarCollection"/></lhs><lhs name\="chat.History"><rhs name\="chat.AlignedChatHistory"/></lhs><lhs name\="chat.ChatHistory"><rhs name\="chat.AlignedChatHistory"/></lhs><lhs name\="chat.AlignedChatHistory"><rhs name\="chat.AlignedChatHistory"/></lhs><lhs name\="composition.TalkingScenic"><rhs name\="composition.TalkingScene"/></lhs><lhs name\="composition.Scenic"><rhs name\="composition.TalkingScene"/></lhs><lhs name\="composition.Scene"><rhs name\="composition.TalkingScene"/></lhs><lhs name\="composition.TalkingScene"><rhs name\="composition.TalkingScene"/></lhs><lhs name\="avatars.Collectable"><rhs name\="avatars.FallenCollection"/></lhs><lhs name\="util.models.VectorChangeEvent"><rhs name\="util.models.VectorChangeEvent"/></lhs><lhs name\="scanner.InheritedScannable"><rhs name\="scanner.InheritedTokenScannerHistory"/></lhs><lhs name\="scanner.Scannable"><rhs name\="scanner.InheritedTokenScannerHistory"/></lhs><lhs name\="scanner.TokenScanner"><rhs name\="scanner.InheritedTokenScannerHistory"/></lhs><lhs name\="scanner.InheritedTokenScannerHistory"><rhs name\="scanner.InheritedTokenScannerHistory"/></lhs><lhs name\="java.lang.Runnable"><rhs name\="graphics.ASetYCommand"/><rhs name\="graphics.ASetXCommand"/></lhs></history>
+org.eclipse.jdt.ui.text.code_templates_migrated=true

@@ -1,0 +1,19 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class MinusToken extends Token implements Tokenizable{
+
+	public MinusToken(char curChar) {
+		super(curChar);
+		setDescription("Minus");
+	}
+	public char returnToken(){
+		return charInput;
+	}
+	@Override
+	void takeTokenAction(TalkingScene scene) {
+		//intentional null method. 
+	}
+
+}

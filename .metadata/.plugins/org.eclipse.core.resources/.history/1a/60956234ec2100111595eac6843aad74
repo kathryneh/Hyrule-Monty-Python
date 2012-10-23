@@ -1,0 +1,58 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class UndoableIteratedParser implements Undoable {
+	IteratedTokenDefiner parser;
+	int oldMove;
+	int newMove;
+	MoveCommandUndoer undoer;
+
+	public UndoableIteratedParser(String arg, TalkingScene newScene){
+		undoer = new MoveCommandUndoer();
+		parser = new IteratedTokenDefiner (arg, newScene, undoer);
+	}
+
+	public void setInput(String newInput){
+		parser.setInput(newInput);
+		if (parser.parserReturnType()!= null){
+			if (parser.parserReturnType().equals("redo")){
+				undoer.redoIterated();
+			}
+			else if (parser.parserReturnType().equals("undo")){
+				undoer.undoIterated();
+				System.out.println("Parser" + parser);
+				System.out.println("Undoer" + undoer);
+			}
+			else if (parser.parserReturnType().equals("move")){
+				System.out.println("Parser return type" + parser.parserReturnType());
+				System.out.println("Parser" + parser);
+				System.out.println("Undoer" + undoer);
+				int newValue = parser.getMoveValue();
+				System.out.println(newValue);
+				undoer.executeIterated(new MoveCommand(parser, newValue));
+				
+				//undoer.execute(new MoveCommand(parser, 10 ));
+			}
+		}
+	}
+	public String getInput(){
+		return parser.getInput();
+	}
+
+	@Override
+	public void undo() {
+		undoer.undo();
+	}
+	public int getMoveValue(){
+		return parser.getMoveValue();
+	}
+
+	@Override
+	public void redo() {
+		undoer.redo();
+	}
+	public void setMoveValue(){
+		undoer.executeIterated(new MoveCommand(parser, getMoveValue()));
+	}
+}

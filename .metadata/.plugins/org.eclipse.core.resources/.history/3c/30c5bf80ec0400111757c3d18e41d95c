@@ -1,0 +1,109 @@
+package scanner;
+
+import util.annotations.Visible;
+import composition.TalkingScene;
+
+public class Parser extends InheritedTokenScannerList implements Parsable {
+	//String input;
+	String returnedString;
+	TokenScanner ts;
+	TalkingScene scene;
+
+	public Parser(String arg, TalkingScene newScene) {
+		super(arg);
+		scene = newScene;
+		setInput(arg);
+
+	}
+	public String getInput() {
+		return inputString;
+	}
+	@Visible(false)
+	public void setReturnedString(String tokenString) {
+		// returnedString = returnedString + tokenString;
+		//TokenScanner ts = new scanner.InheritedTokenScanner(input);
+		returnedString = ts.toString();
+	}
+	public void takeUserInput(String arg){
+		setInput(arg);
+	}
+
+	public void setInput(String newInput) {
+		//if (input!= null){
+		//input = input + newInput;
+		//}
+		//else{
+		inputString = newInput;
+		setTokenString(inputString);
+		//}
+		findTokens(inputString);
+		tokenParser(getTokenList());
+		
+	}
+	@Visible(false)
+	public String getReturnedString() {
+		return returnedString;
+	}
+	public void tokenParser(TokenList listable){
+		TokenList t = (TokenList) listable;
+		Token[] tokens = t.tokenCollection; 
+		for (int i = 0 ; i<t.size()-1 ; i++){
+			//System.out.println(t.size());
+			String tDesc = tokens[i].getDescription(); 
+			//String tDescNext = tokens[i+1].getDescription();
+			//String tDescThird = tokens[i+2].getDescription();
+			if(tDesc.equals("Command")){
+				if (tokens[i].getStringValue().equals("move") |
+						tokens[i].getStringValue().equals("mv")){
+					System.out.println("Command to move");
+					if (tokens[i+1].getDescription().equals("Number")){
+						scene.moveKnightAvatarCollectionX((((NumberToken) tokens[i+1]).getIntValue()));
+						System.out.println("Command to Move to Number");
+						i++;
+					}
+					else if (tokens[i+1].getDescription().equals("Plus")){
+						if ((tokens[i+2] != null) && (tokens[i+2].getDescription().equals("Number"))){
+							scene.moveKnightAvatarCollectionX((((PlusToken) tokens[i+1]).getCharValue()));
+							i++;
+							i++;
+						}
+					}
+					else if (tokens[i+1].getDescription().equals("Minus")){
+						if (tokens[i+2].getDescription().equals("Number")){
+							scene.moveKnightAvatarCollectionX(-(((MinusToken) tokens[i+1]).getCharValue()));
+							i++;
+							i++;
+						}
+					}
+
+				}
+				else if (tokens[i].getStringValue().equals("say") |
+						tokens[i].getStringValue().equals("sy")){
+					if (tokens[i+1].getDescription().equals("Quoted String")){
+						scene.speakAvatars(tokens[i+1].getStringValue());
+						i++;
+					}
+				}
+				else if (tokens[i].getStringValue().equals("passed") |
+						tokens[i].getStringValue().equals("pass")){
+					scene.knightCrossBridge();
+					}
+				else if (tokens[i].getStringValue().equals("failed") |
+						tokens[i].getStringValue().equals("fail")){
+					scene.knightFallOffCliff();
+					}
+				else if (tokens[i].getStringValue().equals("redo") |
+						tokens[i].getStringValue().equals("repeat")){
+					tokens[i] = null;
+					i--;
+					i--;
+					}
+			}
+			else if (tokens[i] == null){
+			}
+			else {
+				System.out.println("Invalid token order");
+			}
+		}
+	}
+}

@@ -1,0 +1,254 @@
+package scanner;
+
+import tokens.MinusToken;
+import tokens.MoveCommandToken;
+import tokens.NumberToken;
+import tokens.PassedCommandToken;
+import tokens.PlusToken;
+import tokens.RedoCommandToken;
+import tokens.SayCommandToken;
+import tokens.StringToken;
+import tokens.Token;
+import tokens.UndoCommandToken;
+import graphics.Animation;
+import composition.TalkingScene;
+
+public class Parser implements Parsable{//extends InheritedTokenScannerHistory implements Parsable {
+	//String input;
+	//private String returnedString;
+	//private TokenScanner ts;
+	private TalkingScene scene;
+	InheritedTokenScannerHistory history;
+	private int moveValue = 0;
+	private String commandType;
+	
+	public Parser(String arg, TalkingScene newScene) {
+		history = new InheritedTokenScannerHistory(arg);
+		scene = newScene;
+		
+		//setInput(arg);
+	}
+	public String getInput() {
+		return history.inputString;
+	}
+	
+/*	
+	public void setReturnedString(String tokenString) {
+		// returnedString = returnedString + tokenString;
+		//TokenScanner ts = new scanner.InheritedTokenScanner(input);
+		returnedString = ts.toString();
+	}
+*/
+	public void takeUserInput(String arg){
+		setInput(arg);
+	} 
+	public void setInput(String newInput) {
+		//System.out.println("input entered: " + newInput);
+		//if (input!= null){
+		//input = input + newInput;
+		//}
+		//else{
+		String localInputString = newInput+" ";
+		history.setInput(localInputString);
+		//}
+		history.findTokens();
+		//buildTokenList();
+		TokenHistory tokenArray = getTokenList();
+		tokenParser(tokenArray);
+	}
+	
+	public TokenHistory getTokenList(){
+		return history.tokenList;
+	}
+	
+//	public String getReturnedString() {
+//		return returnedString;
+//	}
+	public void tokenParser(TokenHistory listable){
+		//System.out.println("parseToken method begun");
+		TokenHistory t = (TokenHistory) listable;
+		java.lang.Object[] tokens = t.getObjectArray(); 
+		//System.out.println(t.size());
+		for (int i = TokenNumber.getTokenNumber(); i<t.size(); i++){
+			//System.out.println(t.size());
+			System.out.println(tokens[i]);
+			System.out.println(tokens[i+1]);
+			//String tDesc=null;
+			//if (tokens[i]!=null){
+			//tDesc = tokens[i].getDescription(); 
+			//}
+			//String tDescNext = tokens[i+1].getDescription();
+			//String tDescThird = tokens[i+2].getDescription();
+			if(tokens[i] instanceof CommandToken){
+				if (tokens[i] instanceof MoveCommandToken){
+					i = i+ parseMoveToken(tokens, i);
+					
+				}
+				else if (tokens[i] instanceof SayCommandToken){
+					i = i + parseSayToken(tokens, i);
+					//System.out.println("Say command completed");
+					TokenNumber.accessToken();
+					commandType = "null";
+
+				}
+				else if (tokens[i] instanceof PassedCommandToken){
+					scene.KnightCrossBridge();
+					TokenNumber.accessToken();
+					commandType = "null";
+				}
+				else if (tokens[i] instanceof FailedCommandToken){
+					scene.KnightFallOffCliff();
+					TokenNumber.accessToken();
+					commandType = "null";
+				}
+				else if (tokens[i] instanceof RedoCommandToken){
+					TokenNumber.accessToken();
+					commandType = "redo";
+				}
+				else if (tokens[i] instanceof UndoCommandToken){
+					TokenNumber.accessToken();
+					commandType = "undo";
+				}
+				else if (tokens[i] instanceof AnimateCommandToken){
+					scene.setAnimation();
+					TokenNumber.accessToken();
+					commandType = "null";
+				}
+				else if (tokens[i] instanceof ChangePauseCommandToken){
+					i = i+ parseChangePauseToken(tokens, i);
+					commandType = "null";
+				}
+				else if (tokens[i] instanceof ChangeStepCommandToken){
+					i = i+ parseChangeStepToken(tokens, i);
+					commandType = "null";
+				}
+			}
+			else if (tokens[i] == null){
+			}
+			else {
+				System.out.println("Invalid token order");
+				//System.out.println("Error token" + tokens[i]);
+			}
+		}
+	}
+	public int parseMoveToken(java.lang.Object[] tokens, int i){
+		System.out.println("Command to move"); 
+		if (((Token)tokens[i+1]) instanceof NumberToken){
+			//scene.moveKnightAvatarCollectionX((((NumberToken) tokens[i+1]).getIntValue()));
+			commandType = "move";
+			setMoveValue(((NumberToken) tokens[i+1]).getIntValue());
+			//executeMoveCommand(((NumberToken) tokens[i+1]).getIntValue());
+			//System.out.println("Command to Move to Number");
+			TokenNumber.accessToken();
+			TokenNumber.accessToken();
+			return 1;
+		}
+		else if (((Token)tokens[i+1]) instanceof PlusToken){
+			if (((Token)tokens[i+2]) instanceof NumberToken && tokens[i+2] != null){
+				//scene.moveKnightAvatarCollectionX((((PlusToken) tokens[i+1]).getCharValue()));
+				//executeMoveCommand((((PlusToken) tokens[i+1]).getCharValue()));
+				setMoveValue(((PlusToken) tokens[i+1]).getCharValue());
+				commandType = "move";
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				return 2;
+			}
+		}
+		else if (((Token)tokens[i+1]) instanceof MinusToken){
+			if (((Token)tokens[i+2]) instanceof NumberToken && tokens[i+2] != null){
+				//scene.moveKnightAvatarCollectionX(-(((MinusToken) tokens[i+1]).getCharValue()));
+				//executeMoveCommand(-(((MinusToken) tokens[i+1]).getCharValue()));
+				setMoveValue(-(((MinusToken) tokens[i+1]).getCharValue()));
+				commandType = "move";
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				return 2;
+			}
+		}
+		return 0;
+	}
+	
+	public void executeMoveCommand(int move){
+		scene.moveKnightAvatarCollectionX(move);
+	}
+	
+	public void setMoveValue(int move){
+		moveValue = move;
+	}
+	public int getMoveValue(){
+		return moveValue;
+	}
+	
+	public int parseChangePauseToken(java.lang.Object[] tokens, int i){
+		System.out.println("ChangePauseCommand"); 
+		if (((Token)tokens[i+1]) instanceof NumberToken){
+			Animation.setAmountPauseTime((((NumberToken) tokens[i+1]).getIntValue()));
+			System.out.println("ChangePauseNumber");
+			TokenNumber.accessToken();
+			TokenNumber.accessToken();
+			return 1;
+		}
+		else if (((Token)tokens[i+1]) instanceof PlusToken){
+			if (((Token)tokens[i+2]) instanceof NumberToken && tokens[i+2] != null){
+				Animation.setAmountPauseTime((((PlusToken) tokens[i+1]).getCharValue()));
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				return 2;
+			}
+		}
+		else if (((Token)tokens[i+1]) instanceof MinusToken){
+			if (((Token)tokens[i+2]) instanceof NumberToken && tokens[i+2] != null){
+				Animation.setAmountPauseTime(-(((MinusToken) tokens[i+1]).getCharValue()));
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				return 2;
+			}
+		}
+		return 0;
+	}
+	public int parseChangeStepToken(java.lang.Object[] tokens, int i){
+		System.out.println("ChangeStepCommand"); 
+		if (((Token)tokens[i+1]) instanceof NumberToken){
+			Animation.setNumSteps((((NumberToken) tokens[i+1]).getIntValue()));
+			System.out.println("ChangeStepNumber");
+			TokenNumber.accessToken();
+			TokenNumber.accessToken();
+			return 1;
+		}
+		else if (((Token)tokens[i+1]) instanceof PlusToken){
+			if (((Token)tokens[i+2]) instanceof NumberToken && tokens[i+2] != null){
+				Animation.setNumSteps((((PlusToken) tokens[i+1]).getCharValue()));
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				return 2;
+			}
+		}
+		else if (((Token)tokens[i+1]) instanceof MinusToken){
+			if (((Token)tokens[i+2]) instanceof NumberToken && tokens[i+2] != null){
+				Animation.setNumSteps(-(((MinusToken) tokens[i+1]).getCharValue()));
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				TokenNumber.accessToken();
+				return 2;
+			}
+		}
+		return 0;
+	}
+	
+	public int parseSayToken(java.lang.Object[] tokens, int i){
+		if (((Token)tokens[i+1]) instanceof StringToken){
+			scene.speakAvatars(((Token)tokens[i+1]).getStringValue());
+			TokenNumber.accessToken();
+			return 1;
+		}
+		else return 0;
+	}
+	public String parserReturnType(){
+		return commandType;
+	}
+}

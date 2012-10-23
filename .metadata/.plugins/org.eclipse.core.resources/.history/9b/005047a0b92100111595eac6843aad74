@@ -1,0 +1,41 @@
+package scanner;
+
+import tokens.Token;
+import tokens.Tokenizable;
+import composition.TalkingScene;
+
+public class NumberToken extends Token implements Tokenizable{
+	
+	//may need to implement takeTokenAction
+	
+	public NumberToken(String input) {
+		super(input);
+		setDescription("Number");
+	}
+	public NumberToken(String input, TalkingScene s, Undoer undoer) {
+		super(input);
+		setDescription("Number");
+		scene = s;
+		setStringValue(input);
+		//takeTokenAction();
+	}
+	int stringValue;
+	int oldStringValue;
+	TalkingScene scene;
+	@Override
+	//this overriden method changes the string input value to an integer
+	public void setStringValue(String input){
+		System.out.println("String input" + input);
+		if (input != " "){
+		stringValue = Integer.parseInt(input);
+		}
+	}
+
+	public int getIntValue(){
+		return stringValue;
+	}
+
+	//void takeTokenAction() {
+	//	undoer.execute(new MoveCommand(parser, parser.getMoveValue()));		
+	//}
+}

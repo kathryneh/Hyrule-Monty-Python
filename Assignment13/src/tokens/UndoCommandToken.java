@@ -1,0 +1,23 @@
+package tokens;
+
+import scanner.MoveCommandUndoer;
+import composition.TalkingScene;
+
+public class UndoCommandToken extends CommandToken implements Tokenizable {
+TalkingScene s;
+MoveCommandUndoer undoer;
+	public UndoCommandToken(String newInput) {
+		super(newInput);
+	}
+
+	public UndoCommandToken(TalkingScene scene, MoveCommandUndoer undoer) {
+		super("undo");
+		s = scene;
+		this.undoer = undoer;
+		takeTokenAction();
+	}
+	void takeTokenAction(){
+		undoer.undoIterated();
+	}
+
+}

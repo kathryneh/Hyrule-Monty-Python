@@ -1,0 +1,55 @@
+package scanner;
+
+public class IteratedScanner implements Iteratable<String> {
+	int nextElementPos= 0;
+	String string; 
+	public IteratedScanner(String arg){
+		string = arg;		
+	}
+	
+	@Override
+	public boolean hasNext() {
+		return nextElementPos<string.length();
+	}
+
+	@Override
+	public String next() {
+		int startIndex = nextElementPos;
+		movePastCurrentToken();
+		skipNonTokenCharacters();
+		int endIndex = nextElementPos;
+		String token = getToken(startIndex, endIndex);
+		return token;
+	}
+	
+	void movePastCurrentToken() {
+		nextElementPos++;
+	} 
+	
+	void skipNonTokenCharacters(){
+		while(!isWhiteSpace(string.charAt(nextElementPos)) && nextElementPos<string.length()){
+			nextElementPos++;
+		}
+	}
+	
+	String getToken(int start, int end){
+		String token = string.substring(start, end);
+		return token;
+	}
+	
+	boolean isWhiteSpace(char s){
+		if (s==' '){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	public void setInput(String localInputString) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

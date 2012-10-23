@@ -1,0 +1,20 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class PassedCommandToken extends CommandToken implements Tokenizable {
+	TalkingScene scene;
+	public PassedCommandToken(String newInput) {
+		super(newInput);
+	}
+	
+	public PassedCommandToken(String newInput, TalkingScene scene){
+		super(newInput);
+		takeTokenAction();
+	}
+
+	void takeTokenAction() {
+		scene.KnightCrossBridge();		
+	}
+
+}

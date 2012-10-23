@@ -1,0 +1,69 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class IteratedTokenDefiner {
+	IteratedScanner scanner;
+	String string;
+	TalkingScene scene;
+
+	public IteratedTokenDefiner(String args, TalkingScene s){
+		scene = s;
+		scanner = new IteratedScanner(args);
+	}
+	public void classifyTokens(){
+		while (scanner.hasNext()){
+			String token = scanner.next();
+			if (token.equals("move")){
+				createMoveToken();
+			}
+			else if (token.equals("say")){
+				createSayToken();
+			}
+			else if (token.equals("pass")){
+				createPassToken();
+			}
+			else if (token.equals("fail")){
+				createFailToken();
+			}
+			else if (token.equals("animate")){
+				createAnimateToken();
+			}
+			else if (token.equals("undo")){
+				createUndoToken();
+			}
+			else if (token.equals("redo")){
+				createRedoToken();
+			}
+			else {
+				addErrorOutput();
+			}
+		}
+	}
+	void createPassToken(){
+		String nextToken = scanner.next();
+		new PassedToken(nextToken, scene);
+	}
+	void createSayToken(){
+		String nextToken = scanner.next();
+		new StringToken(nextToken, scene);
+	}
+	
+	void createMoveToken(){
+		String nextToken = scanner.next();
+		if (nextToken.equals("+")){
+			createNumberToken();
+		}
+		else if (nextToken.equals("-")){
+			createNumberToken();
+		}
+		else{
+			createNumberToken();
+		}
+	}
+
+	void createNumberToken(){
+		String nextToken = scanner.next();
+		new NumberToken(nextToken, scene);
+	}
+}

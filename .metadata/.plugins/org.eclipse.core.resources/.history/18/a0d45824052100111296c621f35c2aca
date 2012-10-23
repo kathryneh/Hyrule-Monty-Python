@@ -1,0 +1,8 @@
+package generics;
+
+public class CollectionIterator {
+
+	public CollectionIterator(String[] args){
+		
+	}
+}

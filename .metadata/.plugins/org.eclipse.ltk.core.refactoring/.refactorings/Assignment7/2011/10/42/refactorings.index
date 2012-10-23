@@ -1,0 +1,34 @@
+1318208460683	Rename type 'TextGraphic'
+1318208925828	Rename type 'Label'
+1318209005185	Delete element
+1318209010170	Delete element
+1318209014090	Delete element
+1318209019727	Delete element
+1318210801638	Delete element
+1318212450210	Delete element
+1318212455889	Delete element
+1318213762506	Delete element
+1318214355441	Rename type 'TalkableKnight'
+1318214445201	Delete element
+1318216433007	Rename type 'TalkingKnightAvatar'
+1318219934789	Delete element
+1318219945076	Delete element
+1318220666601	Rename type 'TalkingAvatar'
+1318286037878	Rename type 'chatHistory'
+1318294354841	Rename type 'Scene'
+1318294390509	Rename type 'Compositionable'
+1318295226126	Delete element
+1318295541121	Delete element
+1318295545614	Delete element
+1318295761250	Rename type 'ScrollableComposition'
+1318296030454	Rename type 'TalkingComposition'
+1318296039794	Rename type 'TalkingKnightComposition'
+1318308113260	Rename field 'knightArray'
+1318308145341	Rename field 'KAC_MAX_SIZE'
+1318386034268	Delete element
+1318386064824	Rename type 'AvatarCollection'
+1318386078047	Rename type 'FallenAvatarCollection'
+1318386117751	Rename type 'KnightAvatarCollection'
+1318391484840	Rename type 'AlignedCollection'
+1318469060732	Delete element
+1318469069110	Delete element

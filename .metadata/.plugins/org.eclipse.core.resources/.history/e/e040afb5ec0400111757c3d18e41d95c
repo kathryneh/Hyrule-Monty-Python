@@ -1,0 +1,16 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class PlusToken extends Token implements Tokenizable {
+
+	public PlusToken(char curChar) {
+		super(curChar);
+		setDescription("Plus");
+	}
+
+	@Override
+	void takeTokenAction(TalkingScene scene) {
+		// intentional null method		
+	}
+}

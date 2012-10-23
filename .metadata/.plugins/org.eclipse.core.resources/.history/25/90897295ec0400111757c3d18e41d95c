@@ -1,0 +1,17 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class RedoCommandToken extends CommandToken implements Tokenizable {
+
+	public RedoCommandToken(String newInput) {
+		super(newInput);
+	}
+
+	@Override
+	void takeTokenAction(TalkingScene scene) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

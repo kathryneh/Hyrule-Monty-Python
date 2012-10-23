@@ -1,0 +1,21 @@
+package scanner;
+
+import tokens.Tokenizable;
+import composition.TalkingScene;
+
+public class FailedCommandToken extends CommandToken implements Tokenizable {
+	TalkingScene scene; 
+	public FailedCommandToken(String newInput) {
+		super(newInput);
+	}
+	
+	public FailedCommandToken(TalkingScene scene){
+		super("fail");
+		this.scene = scene;
+		takeTokenAction();
+	}
+
+	void takeTokenAction(){
+		scene.KnightFallOffCliff();
+	}
+}

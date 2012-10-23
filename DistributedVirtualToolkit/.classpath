@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="test-classes" path="test"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="gluegen-rt.dll"/>
+	<classpathentry kind="lib" path="gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="gwt-dev.jar"/>
+	<classpathentry kind="lib" path="gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="gwt-user.jar"/>
+	<classpathentry kind="lib" path="jogl_awt.dll"/>
+	<classpathentry kind="lib" path="jogl_cg.dll"/>
+	<classpathentry kind="lib" path="jogl.dll"/>
+	<classpathentry kind="lib" path="jogl.jar"/>
+	<classpathentry kind="lib" path="swt-debug.jar"/>
+	<classpathentry kind="lib" path="swt.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

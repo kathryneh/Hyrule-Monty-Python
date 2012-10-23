@@ -1,0 +1,18 @@
+package scanner;
+
+public class NumberToken extends Token implements Tokenizable {
+	public NumberToken(String input) {
+		super(input);
+		setDescription("Number");
+	}
+	int stringValue;
+	@Override
+	//this overriden method changes the string input value to an integer
+	public void setStringValue(String input){
+		stringValue = Integer.parseInt(input);
+	}
+
+	public int getIntValue(){
+		return stringValue;
+	}
+}

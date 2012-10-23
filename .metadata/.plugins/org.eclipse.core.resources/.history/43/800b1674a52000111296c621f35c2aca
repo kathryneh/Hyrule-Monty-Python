@@ -1,0 +1,40 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class IteratedTokenDefiner {
+IteratedScanner scanner;
+String string;
+TalkingScene scene;
+
+public IteratedTokenDefiner(String args, TalkingScene s){
+	scene = s;
+	scanner = new IteratedScanner(args);
+	}
+public void classifyTokens(){
+	while (scanner.hasNext()){
+		String token = scanner.next();
+		if (token.equals("move")){
+				createMoveToken();
+			}
+		}
+	}
+
+void createMoveToken(){
+	String nextToken = scanner.next();
+	if (nextToken.equals("+")){
+		createNumberToken();
+	}
+	else if (nextToken.equals("-")){
+		createNumberToken();
+	}
+	else{
+		createNumberToken();
+	}
+}
+
+void createNumberToken(){
+	String nextToken = scanner.next();
+	NumberToken numberToken = new NumberToken(nextToken, scene);
+}
+}

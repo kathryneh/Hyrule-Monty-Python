@@ -1,0 +1,11 @@
+package tokens;
+
+import scanner.CommandToken;
+
+public class MoveCommandToken extends CommandToken implements Tokenizable {
+
+	public MoveCommandToken(String newInput) {
+		super(newInput);
+	}
+
+}

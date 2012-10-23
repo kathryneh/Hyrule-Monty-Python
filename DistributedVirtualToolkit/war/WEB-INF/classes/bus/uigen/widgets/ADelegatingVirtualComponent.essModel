@@ -1,0 +1,466 @@
+[Box: ::bus.uigen.widgets - ::<<Unknown>>::DefaultTableModel]
+X=7829
+Y=40
+
+[Box: ::bus.uigen.widgets - ::<<Unknown>>::Exception]
+X=6375
+Y=40
+
+[Box: ::bus.uigen.widgets - ::<<Unknown>>::TableModel]
+X=7624
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets.swing::SwingTable]
+X=7215
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ADelegatingVirtualComponent]
+X=430
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::AUniversalWidget]
+X=635
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::BorderLayoutFactory]
+X=5965
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ButtonFactory]
+X=5555
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ButtonGroupFactory]
+X=6170
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ButtonGroupSelector]
+X=6580
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ButtonSelector]
+X=5555
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::CheckBoxFactory]
+X=3095
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::CheckBoxSelector]
+X=3300
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ComboBoxFactory]
+X=3915
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ComboBoxSelector]
+X=3915
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ContainerFactory]
+X=1079
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::DelegatePanelFactory]
+X=5350
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::DelegatePanelSelector]
+X=5350
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::DesktopPaneFactory]
+X=6375
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::DesktopPaneSelector]
+X=6785
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::EditorPaneFactory]
+X=4940
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::EditorPaneSelector]
+X=4940
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::FlowLayoutFactory]
+X=6170
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::FormattedTextFieldFactory]
+X=4530
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::FormattedTextFieldSelector]
+X=4530
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::FrameFactory]
+X=6800
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::FrameSelector]
+X=7195
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::GridLayoutFactory]
+X=5760
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::InternalFrameFactory]
+X=4121
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::InternalFrameSelector]
+X=6990
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::LabelFactory]
+X=4325
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::LabelSelector]
+X=4325
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::LayoutManagerFactory]
+X=5760
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ListFactory]
+X=4735
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ListSelector]
+X=4735
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::MenuBarFactory]
+X=4120
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::MenuBarSelector]
+X=4120
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::MenuFactory]
+X=3710
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::MenuItemFactory]
+X=5145
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::MenuItemSelector]
+X=5145
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::MenuSelector]
+X=3710
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PackageMismatchException]
+X=5965
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::Painter]
+X=20
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PanelFactory]
+X=1660
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PanelSelector]
+X=1865
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PasswordFieldFactory]
+X=225
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PasswordFieldSelector]
+X=430
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PopupMenuFactory]
+X=1865
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::PopupMenuSelector]
+X=2070
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ProgressBarFactory]
+X=2070
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ProgressBarSelector]
+X=2275
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ProxyAbstractTableModel]
+X=7006
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::RadioButtonFactory]
+X=635
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::RadioButtonSelector]
+X=840
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ScrollPaneFactory]
+X=840
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ScrollPaneSelector]
+X=1045
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SliderFactory]
+X=1455
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SliderSelector]
+X=1660
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SpinnerFactory]
+X=1250
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SpinnerSelector]
+X=1455
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SplitPaneFactory]
+X=2480
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SplitPaneSelector]
+X=2685
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::SwingEditorPaneSelector]
+X=225
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TabbedPaneFactory]
+X=2275
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TabbedPaneSelector]
+X=2480
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TableFactory]
+X=1045
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TableSelector]
+X=1250
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TextAreaFactory]
+X=20
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TextAreaSelector]
+X=20
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TextFieldFactory]
+X=2685
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TextFieldSelector]
+X=2890
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ToolBarFactory]
+X=2890
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::ToolBarSelector]
+X=3095
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TreeFactory]
+X=430
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::TreeSelector]
+X=635
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::UniversalWidget]
+X=7400
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualAbstractTableModel]
+X=7840
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualActionableComponent]
+X=3505
+Y=40
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualButton]
+X=3300
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualButtonGroup]
+X=225
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualCheckBox]
+X=3505
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualComboBox]
+X=5761
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualComponent]
+X=7210
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualContainer]
+X=5146
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualDefaultTableModel]
+X=6801
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualDelegatePanel]
+X=5533
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualDesktopPane]
+X=5738
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualEditorPane]
+X=3893
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualFormattedTextField]
+X=4201
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualFrame]
+X=4941
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualInternalFrame]
+X=4303
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualLabel]
+X=5966
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualList]
+X=5943
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualMenu]
+X=4326
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualMenuBar]
+X=6171
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualMenuComponent]
+X=7415
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualMenuContainer]
+X=7005
+Y=226
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualMenuItem]
+X=6376
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualPasswordField]
+X=3996
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualPopupMenu]
+X=3483
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualProgressBar]
+X=4531
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualRadioButton]
+X=3300
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualScrollPane]
+X=4508
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualSlider]
+X=5556
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualSpinner]
+X=5351
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualSplitPane]
+X=4713
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTabbedPane]
+X=4918
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTable]
+X=6192
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTableModel]
+X=6968
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTextArea]
+X=3688
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTextComponent]
+X=4736
+Y=864
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTextField]
+X=4098
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualToolBar]
+X=5328
+Y=1258
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualToolkit]
+X=874
+Y=1714
+
+[Box: ::bus.uigen.widgets - ::bus.uigen.widgets::VirtualTree]
+X=5123
+Y=1258
+
+[Diagram: ::bus.uigen.widgets]
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowAssoc=0
+

@@ -1,0 +1,55 @@
+package scanner;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MoveCommandUndoer implements Undoer {
+	List<Command> historyList = new ArrayList<Command>();
+	int nextCommandIndex = 0;
+	
+	public void execute (Command c) {
+		  while(nextCommandIndex < historyList.size()) {
+		    historyList.remove(nextCommandIndex); // clear redo chain
+		  }
+		  c.execute();
+		  historyList.add(c);
+		  nextCommandIndex++;
+		}
+	
+	public void executeIterated(Command c) {
+		  while(nextCommandIndex < historyList.size()) {
+		    historyList.remove(nextCommandIndex); // clear redo chain
+		  }
+		  c.executeIterated();
+		  historyList.add(c);
+		  nextCommandIndex++;
+		}
+	
+	public void undo() {
+		  assert preUndo();
+		  nextCommandIndex--;
+		  Command c = historyList.get(nextCommandIndex);
+		  c.undo();    
+		}
+	public void undoIterated() {
+		  assert preUndo();
+		  nextCommandIndex--;
+		  Command c = historyList.get(nextCommandIndex);
+		  c.undoIterated();    
+		}
+	
+	public boolean preUndo(){
+		return (nextCommandIndex !=0);
+	}
+	public void redo() {
+		   assert preRedo();
+		   Command c = historyList.get(nextCommandIndex);
+		   c.execute();
+		   nextCommandIndex++;
+		}
+	public boolean preRedo(){
+		return (nextCommandIndex!= historyList.size());
+	}
+
+}
+

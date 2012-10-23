@@ -1,0 +1,107 @@
+package avatars;
+
+import chat.AlignedChatHistory;
+import chat.ChatHistory;
+
+public abstract class TalkingAvatar implements Talkable {
+	
+	protected AlignedChatHistory chat;
+	protected int x;
+	protected int y;
+	protected String name;
+	
+	public void setName(String newName){
+		name = newName;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	//public void setType(String newType){
+	//	type = newType;
+	//}
+	public String getType(){
+		return "guard";
+	}
+	
+	public abstract void setX(int newVal);
+	
+	public abstract void setY(int newVal);
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
+	
+	public TalkingAvatar(int x, int y, String element) {
+		buildTalkingAvatar(x, y, element);
+		setX(x);
+		setY(y);
+		setName(element);
+	}
+	public void setChatX(int x){
+		chat.moveX(x);
+	}
+	public void setChatY(int y){
+		chat.moveY(y);
+	}
+	public void setAnimatedChatX(int x){
+		chat.moveAnimatedX(x);
+	}
+	public void setAnimatedChatY(int y){
+		chat.moveAnimatedY(y);
+	}
+	
+	public abstract Avatar getAvatar();
+	}
+	
+	public void setChatHistory(AlignedChatHistory chat){
+	}
+	
+	public AlignedChatHistory getChatHistory() {
+		return chat;
+	}
+
+	public void pop() {
+		chat.pop();
+	}
+
+	public void push(int x, int y, String element) {
+		chat.push(x, y, element);
+	}
+
+	public void removeElement() {
+		chat.removeElement();
+	}
+
+	public void moveX(int newX) {
+		x = x + newX;
+		setX(x);
+		chat.moveX(newX);
+		
+	}
+	public void moveY(int newY) {
+		y = y + newY;
+		setY(y);
+		chat.moveY(newY);
+	}
+	
+	public void moveAnimatedX(int newX) {
+		x = x + newX;
+		setAnimatedX(x);
+		chat.moveAnimatedX(newX);
+		
+	}
+	public void moveAnimatedY(int newY) {
+		y = y + newY;
+		setAnimatedY(y);
+		chat.moveAnimatedY(newY);
+	}
+	public abstract void setAnimatedX(int newVal);
+	
+	public abstract void setAnimatedY(int newVal);
+
+}

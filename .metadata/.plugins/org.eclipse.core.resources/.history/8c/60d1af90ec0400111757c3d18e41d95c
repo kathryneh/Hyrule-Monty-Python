@@ -1,0 +1,16 @@
+package scanner;
+
+import composition.TalkingScene;
+
+public class FailedCommandToken extends CommandToken implements Tokenizable {
+
+	public FailedCommandToken(String newInput) {
+		super(newInput);
+	}
+
+	@Override
+	void takeTokenAction(TalkingScene scene) {
+		scene.knightFallOffCliff();
+	}
+
+}

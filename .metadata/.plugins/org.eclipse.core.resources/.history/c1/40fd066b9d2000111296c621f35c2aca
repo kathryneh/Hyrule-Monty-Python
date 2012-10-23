@@ -1,0 +1,13 @@
+package scanner;
+
+import java.util.Iterator;
+
+public class IteratedScanner implements Iterable<Token> {
+
+	@Override
+	public Iterator<Token> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

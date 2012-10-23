@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=6Arrays/src&lt;avatars{AvatarCollection.java[AvatarCollection" modifiers="513" timestamp="1317827494590"/>
+<typeInfo handle="=Recitation7/src&lt;collections{GeneralObjectStack.java[GeneralObjectStack" modifiers="1" timestamp="1318001102927"/>
+<typeInfo handle="=Assignment7/src&lt;scanner{Tokenizable.java[Tokenizable" modifiers="512" timestamp="1318196432106"/>
+<typeInfo handle="=Assignment7/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;com.sun.org.apache.xerces.internal.xni.grammars(Grammar.class[Grammar" modifiers="1537" timestamp="1317774320601"/>
+<typeInfo handle="=Assignment7/src&lt;scanner{Scanner.java[Scanner" modifiers="513" timestamp="1318108347981"/>
+<typeInfo handle="=Assignment7/src&lt;graphics{Text.java[Text" modifiers="1" timestamp="1318209556231"/>
+<typeInfo handle="=Assignment7/src&lt;graphics{Labelable.java[Labelable" modifiers="513" timestamp="1318208925817"/>
+<typeInfo handle="=Assignment7/src&lt;graphics{Graphicable.java[Graphicable" modifiers="513" timestamp="1318208264419"/>
+<typeInfo handle="=Assignment7/src&lt;avatars{Avatarized.java[Avatarized" modifiers="513" timestamp="1318213324547"/>
+<typeInfo handle="=Assignment7/src&lt;avatars{GuardAvatarized.java[GuardAvatarized" modifiers="513" timestamp="1318212268939"/>
+<typeInfo handle="=Assignment7/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;com.sun.corba.se.spi.orbutil.fsm(Guard.class[Guard" modifiers="1537" timestamp="1317774320601"/>
+<typeInfo handle="=Assignment7/src&lt;chat{History.java[History" modifiers="513" timestamp="1318296491773"/>
+<typeInfo handle="=Assignment7/src&lt;avatars{KnightAvatar.java[KnightAvatar" modifiers="1" timestamp="1318214149942"/>
+<typeInfo handle="=Assignment7/src&lt;avatars{Talkable.java[Talkable" modifiers="513" timestamp="1318298364247"/>
+<typeInfo handle="=Assignment7/src&lt;avatars{AvatarCollectable.java[AvatarCollectable" modifiers="513" timestamp="1318386064807"/>
+<typeInfo handle="=Assignment9/src&lt;scanner{Scannable.java[Scannable" modifiers="513" timestamp="1320281627852"/>
+<typeInfo handle="=Recitation10/src&lt;collections{Stack.java[Stack" modifiers="513" timestamp="1320420839786"/>
+<typeInfo handle="=Assignment11/src&lt;generics{Observable.java[Observable" modifiers="513" timestamp="1321416510458"/>
+<typeInfo handle="=Assignment12/src&lt;scanner{Undoer.java[Undoer" modifiers="513" timestamp="1322664012425"/>
+<typeInfo handle="=Assignment12/oeall19.jar&lt;util(Undoer.class[Undoer" modifiers="1537" timestamp="1320887160732"/>
+<typeInfo handle="=Assignment12/oeall19.jar&lt;bus.uigen.compose(Command.class[Command" modifiers="33" timestamp="1320887160732"/>
+<typeInfo handle="=Assignment12/oeall19.jar&lt;bus.uigen.undo(Command.class[Command" modifiers="1537" timestamp="1320887160732"/>
+<typeInfo handle="=Assignment12/oeall19.jar&lt;bus.uigen.undo(Undoer.class[Undoer" modifiers="1537" timestamp="1320887160732"/>
+<typeInfo handle="=Assignment13/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.lang(Iterable.class[Iterable" modifiers="1537" timestamp="1317774320601"/>
+</typeInfoHistroy>

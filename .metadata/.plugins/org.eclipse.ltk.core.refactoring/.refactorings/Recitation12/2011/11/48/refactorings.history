@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AnimationBoolean.java&apos; to &apos;Assignment12/src/graphics&apos;&#x0D;&#x0A;- Original project: &apos;Recitation12&apos;&#x0D;&#x0A;- Destination element: &apos;Assignment12/src/graphics&apos;&#x0D;&#x0A;- Original element: &apos;graphics.AnimationBoolean.java&apos;" description="Copy compilation unit" destination="=Assignment12/src&lt;graphics" element1="/src&lt;graphics{AnimationBoolean.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1322284088977" units="1" version="1.0"/>
+</session>

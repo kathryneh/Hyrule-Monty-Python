@@ -1,0 +1,20 @@
+package tokens;
+
+import composition.TalkingScene;
+
+public class AnimateCommandToken extends CommandToken implements Tokenizable {
+	TalkingScene s;
+
+	public AnimateCommandToken(String newInput) {
+		super(newInput);
+	}
+
+	public AnimateCommandToken(TalkingScene scene) {
+		super("animate");
+		s = scene;
+		takeTokenAction();
+	}
+	void takeTokenAction(){
+		s.setAnimation();
+	}
+}

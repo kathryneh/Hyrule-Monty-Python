@@ -1,0 +1,8 @@
+package scanner;
+
+public interface Iteratable<T> {
+	 
+  public boolean hasNext(); 
+  public String next ();
+
+}
